@@ -1,5 +1,4 @@
 // TradingViewWidget.jsx
-"use strict";
 import { useEffect, useRef, memo } from "react";
 
 function TradingViewWidget() {

@@ -4,6 +4,7 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./Components/navbar/Navbar";
 import GraphSection from "./Components/Graphcard/GraphSection";
+import CtaCard from "./Components/CTA/CtaCard";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
     <div className="app">
       <Navbar />
       <GraphSection />
+      <CtaCard />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 function Navbar() {
   return (
     <div>
-      <header className="flex justify-between px-6 py-2 items-center align-middle bg-white ">
+      <header className="flex justify-between px-6 py-2 items-center align-middle bg-white shadow-md">
         <a href="https://www.koinx.com/">
           <h1 className="text-xl font-bold text-[#0052FE]">
             Koin
