@@ -16,7 +16,7 @@ function CtaCard() {
             alt="Illustration"
             className="mb-6"
             height="200"
-            src="/src/Components/CTA/CTA-illustration.png"
+            src="/src/Components/CTA/CTAillustration.png"
             style={{
               aspectRatio: "200/200",
               objectFit: "cover",
