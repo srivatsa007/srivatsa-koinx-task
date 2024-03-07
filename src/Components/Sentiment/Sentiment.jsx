@@ -1,5 +1,6 @@
 import { AiOutlineRise } from "react-icons/ai";
 import { HiNewspaper } from "react-icons/hi";
+import { IoIosInformationCircle } from "react-icons/io";
 
 const Sentiment = () => {
   return (
@@ -37,37 +38,56 @@ const Sentiment = () => {
           </p>
         </div>
       </div>
-      <h2 className="text-xl font-semibold mb-4">Analyst Estimates</h2>
-      <div className="mb-4">
-        <div className="flex items-center justify-between mb-1">
-          <span className="text-sm font-medium">Buy</span>
-          <span className="text-sm font-medium">76%</span>
-        </div>
-        <div className="progress-wrapper">
-          <div className="progress-bar">
-            <div className="progress-fill" style={{ width: "76%" }}></div>
-          </div>
+      <div className="text-xl font-semibold mb-4 flex items-center gap-2 ">
+        Analyst Estimates
+        <div className="text-gray-500">
+          <IoIosInformationCircle />
         </div>
       </div>
-      <div className="mb-4">
-        <div className="flex items-center justify-between mb-1">
-          <span className="text-sm font-medium">Hold</span>
-          <span className="text-sm font-medium">8%</span>
-        </div>
-        <div className="progress-wrapper">
-          <div className="progress-bar">
-            <div className="progress-fill" style={{ width: "8%" }}></div>
+      <div className="flex gap-4 items-center">
+        <div className="">
+          <div className="flex flex-col items-center justify-center w-32 h-32 bg-[#EBF9F4] rounded-full">
+            <span className="text-4xl font-semibold text-green-500">76%</span>
           </div>
         </div>
-      </div>
-      <div className="mb-4">
-        <div className="flex items-center justify-between mb-1">
-          <span className="text-sm font-medium">Sell</span>
-          <span className="text-sm font-medium">16%</span>
-        </div>
-        <div className="progress-wrapper">
-          <div className="progress-bar">
-            <div className="progress-fill" style={{ width: "16%" }}></div>
+
+        <div className="w-full">
+          <div className="mb-4">
+            <div className="flex items-center justify-between mb-1"></div>
+            <div className="bg-white flex items-center gap-4 w-full">
+              <span className="text-sm font-medium">Buy</span>
+              <div
+                className="bg-green-500 h-4 rounded-sm"
+                style={{ width: "76%" }}
+              ></div>
+              <span className="text-sm font-medium">76%</span>
+            </div>
+          </div>
+          <div className="mb-4">
+            <div className="flex items-center justify-between mb-1">
+              {/* <span className="text-sm font-medium">8%</span> */}
+            </div>
+            <div className="bg-white flex items-center gap-4 w-full">
+              <span className="text-sm font-medium">Hold</span>
+              <div
+                className="bg-gray-500 h-4 rounded-sm"
+                style={{ width: "8%" }}
+              ></div>
+              <span className="text-sm font-medium">8%</span>
+            </div>
+          </div>
+          <div className="mb-4">
+            <div className="flex items-center justify-between mb-1">
+              {/* <span className="text-sm font-medium">16%</span> */}
+            </div>
+            <div className="bg-white flex items-center gap-4 w-full">
+              <span className="text-sm font-medium">Sell</span>
+              <div
+                className="bg-red-500 h-4 rounded-sm"
+                style={{ width: "16%" }}
+              ></div>
+              <span className="text-sm font-medium">16%</span>
+            </div>
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import coinData from "./coin_data";
+import { IoMdArrowDropup } from "react-icons/io";
 
 const Performance = () => {
-  // Extracting data from the coin_data object
   const {
     market_data: { current_price, market_cap, low_24h, high_24h },
     market_cap_change_percentage_24h,
@@ -26,35 +26,48 @@ const Performance = () => {
           <div className="pb-2">Tokenomics</div>
         </div>
       </div>
-      <div className="mt-6">
-        <div>
-          <div>Performance</div>
-        </div>
-        <div>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <div className="text-sm text-gray-600">Today's Low</div>
-              <div className="font-medium">{low_24h.usd}</div>
-              <progress className="w-full bg-red-500" value="70" max="100" />
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold mb-4">Performance</h2>
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <span className="text-sm font-medium text-gray-500">
+              Today's Low
+              <div className="font-medium text-base">{low_24h.usd}</div>
+            </span>
+
+            <div className="relative w-full h-1 bg-gray-200  flex">
+              <div
+                className="absolute left-0 top-0 h-1 bg-orange-500"
+                style={{ width: `${(low_24h.usd / high_24h.usd) * 100}%` }}
+              />
+              <div className="text-sm font-medium text-black">
+                <IoMdArrowDropup />
+                {(low_24h.usd + high_24h.usd) / 2}
+              </div>
+              <div
+                className="absolute right-0 top-0 h-1 w-2/3 bg-lime-500"
+                style={{
+                  width: `${100 - (high_24h.usd / low_24h.usd) * 100}%`,
+                }}
+              />
             </div>
-            <div>
-              <div className="text-sm text-gray-600">Today's High</div>
-              <div className="font-medium">{high_24h.usd}</div>
-              <progress className="w-full bg-green-500" value="90" max="100" />
+
+            <span className="text-sm font-medium text-gray-500">
+              Today's High
+              <div className="font-medium text-base">{high_24h.usd}</div>
+            </span>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-sm font-medium text-gray-500">52W Low</span>
+            <div className="relative w-full h-1 bg-gray-200">
+              <div className="absolute left-0 top-0 h-1 w-1/3 bg-orange-500" />
+              <div className="absolute right-0 top-0 h-1 w-2/3 bg-lime-500" />
             </div>
-            <div>
-              <div className="text-sm text-gray-600">52W Low</div>
-              <div className="font-medium">{market_cap.usd}</div>
-              <progress className="w-full bg-red-500" value="30" max="100" />
-            </div>
-            <div>
-              <div className="text-sm text-gray-600">52W High</div>
-              <div className="font-medium">{current_price.usd}</div>
-              <progress className="w-full bg-green-500" value="95" max="100" />
-            </div>
+            <span className="text-sm font-medium text-gray-500">52W High</span>
           </div>
         </div>
       </div>
+      {/* /// */}
       <div className="mt-6">
         <div>
           <div>Fundamentals</div>

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import Badge from "./Badge";
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
@@ -44,6 +44,8 @@ const Footer = () => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -82,64 +84,32 @@ const Footer = () => {
           <h2 className="text-lg font-semibold mb-4">You May Also Like</h2>
           <Slider ref={sliderRef1} {...settings}>
             {trendingItems.map((coin, index) => (
-              <div key={index}>
+              <div key={index} className="">
                 <Card coin={coin} />
               </div>
             ))}
           </Slider>
-          <button
-            className="prev-button1 absolute top-1/2 left-0 transform -translate-y-1/2"
-            style={{
-              backgroundColor: "red",
-              borderRadius: "50%",
-              width: "50px",
-              height: "50px",
-            }}
-          >
-            <BsChevronLeft color="white" size={30} />
+          <button className="common-button prev-button1 absolute top-1/2 left-0 transform -translate-y-1/2 border-solid border border-gray-300 p-1 rounded-full bg-white">
+            <BsChevronLeft color="black" size={20} />
           </button>
-          <button
-            className="next-button1 absolute top-1/2 right-0 transform -translate-y-1/2"
-            style={{
-              backgroundColor: "red",
-              borderRadius: "50%",
-              width: "50px",
-              height: "50px",
-            }}
-          >
-            <BsChevronRight color="white" size={30} />
+          <button className="common-button next-button1 absolute top-1/2 right-0 transform -translate-y-1/2 border-solid border border-gray-300 p-1 rounded-full bg-white">
+            <BsChevronRight color="black" size={20} />
           </button>
         </div>
         <div className="my-4 relative">
           <h2 className="text-lg font-semibold mb-4">Trending Coins</h2>
           <Slider ref={sliderRef2} {...settings}>
             {trendingItems.map((coin, index) => (
-              <div key={index}>
+              <div key={index} className="h-">
                 <Card coin={coin} />
               </div>
             ))}
           </Slider>
-          <button
-            className="prev-button2 absolute top-1/2 left-0 transform -translate-y-1/2"
-            style={{
-              backgroundColor: "red",
-              borderRadius: "50%",
-              width: "50px",
-              height: "50px",
-            }}
-          >
-            <BsChevronLeft color="white" size={30} />
+          <button className="common-button prev-button1 absolute top-1/2 left-0 transform -translate-y-1/2 border-solid border border-gray-300 p-1 rounded-full bg-white ">
+            <BsChevronLeft color="black" size={20} />
           </button>
-          <button
-            className="next-button2 absolute top-1/2 right-0 transform -translate-y-1/2"
-            style={{
-              backgroundColor: "red",
-              borderRadius: "50%",
-              width: "50px",
-              height: "50px",
-            }}
-          >
-            <BsChevronRight color="white" size={30} />
+          <button className="common-button next-button1 absolute top-1/2 right-0 transform -translate-y-1/2 border-solid border border-gray-300 p-1 rounded-full bg-white">
+            <BsChevronRight color="black" size={20} />
           </button>
         </div>
       </div>
@@ -156,26 +126,24 @@ const Card = ({ coin }) => {
   const color = percentageChange >= 0 ? "text-green-600" : "text-red-600";
 
   return (
-    <div className="flex-shrink-0 relative">
-      <div className="bg-white p-4 rounded-lg shadow-md">
+    <div className="flex mx-2 border-2 rounded-lg overflow-hidden">
+      <div className="bg-white  p-4 shadow-md w-full flex flex-col">
         <div className="flex items-center mb-2">
-          <img
-            src={coin.thumb} // Assuming 'thumb' is the property containing the icon URL
-            alt={coin.name}
-            className="w-8 h-8 mr-2"
-          />
+          <img src={coin.thumb} alt={coin.name} className="w-8 h-8 mr-2" />
           <Badge variant="secondary">{coin.symbol}</Badge>
           <p className={`text-sm ml-2 ${color}`}>
             {percentageChange >= 0 ? "+" : "-"}
             {priceChangePercentage}%
           </p>
         </div>
-        <p className="text-xl font-semibold">{coin.name}</p>
-        <p className="text-lg font-semibold">{coin.data.price}</p>
+        <p className="text-xl font-semibold">
+          {coin.name} | {coin.data.price}
+        </p>
+        {/* <p className="text-lg font-semibold"></p> */}
         <img
           src={coin.data.sparkline}
           alt="Sparkline"
-          className="w-full mt-2"
+          className="w-4/5 mt-2 self-center"
         />
       </div>
     </div>
