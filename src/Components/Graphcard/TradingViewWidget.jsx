@@ -1,10 +1,11 @@
-// TradingViewWidget.jsx
 import { useEffect, useRef, memo } from "react";
 
-function TradingViewWidget() {
+function TradingViewWidget({ currency }) {
   const container = useRef();
 
   useEffect(() => {
+    const symbol = currency === "USD" ? "BTCUSD" : "BTCINR";
+
     const script = document.createElement("script");
     script.src =
       "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
@@ -13,7 +14,7 @@ function TradingViewWidget() {
     script.innerHTML = `
         {
           "autosize": true,
-          "symbol": "BTCUSD",
+          "symbol": "${symbol}",
           "interval": "D",
           "timezone": "Etc/UTC",
           "theme": "light",
@@ -29,7 +30,7 @@ function TradingViewWidget() {
           "support_host": "https://www.tradingview.com"
         }`;
     container.current.appendChild(script);
-  }, []);
+  }, [currency]);
 
   return (
     <div
@@ -41,15 +42,6 @@ function TradingViewWidget() {
         className="tradingview-widget-container__widget"
         style={{ height: "calc(100% - 32px)", width: "100%" }}
       ></div>
-      {/* <div className="tradingview-widget-copyright">
-        <a
-          href="https://www.tradingview.com/"
-          rel="noopener nofollow"
-          target="_blank"
-        >
-          <span className="blue-text">Track all markets on TradingView</span>
-        </a>
-      </div> */}
     </div>
   );
 }
