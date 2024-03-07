@@ -28,12 +28,7 @@ const GraphSection = () => {
 
   return (
     <>
-      <div className="text-sm font-medium max-w-4xl mx-auto mt-8 ">
-        <span className="text-gray-600 font-normal">Cryptocurrencies</span>
-        <span className="mx-1 text-gray-400">{`>>`}</span>
-        <span className="text-black font-semibold">Bitcoin</span>
-      </div>
-      <div className="max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-md w-full h-fit">
+      <div className="max-w-4xl p-6 bg-white rounded-lg shadow-md w-full h-fit mb-8">
         {bitcoinData && (
           <>
             <div className="flex items-center space-x-3">

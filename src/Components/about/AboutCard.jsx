@@ -11,7 +11,7 @@ const AboutCard = () => {
     <div
     // className=" w-4xl mx-auto p-8 "
     >
-      <div className="  bg-white p-6 rounded-lg shadow-md w-full max-w-4xl mx-auto mb-8">
+      <div className="  bg-white p-6 rounded-lg shadow-md w-full max-w-4xl  mb-8">
         <h2 className="text-xl font-semibold mb-4">About Bitcoin</h2>
         <div className="mb-4">
           <h2 className="text-lg font-semibold mb-4">What is Bitcoin?</h2>

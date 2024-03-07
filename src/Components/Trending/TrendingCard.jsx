@@ -22,7 +22,7 @@ function TrendingCard() {
   }, []);
 
   return (
-    <div className=" mb-8 max-w-md  p-6 bg-white rounded-lg shadow-md ">
+    <div className=" mb-8 max-w-md w-full p-6 bg-white rounded-lg shadow-md ">
       <h2 className="text-2xl font-semibold text-gray-700">
         Trending Coins (24h)
       </h2>
