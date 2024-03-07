@@ -55,7 +55,7 @@ const Sentiment = () => {
           <div className="mb-4">
             <div className="flex items-center justify-between mb-1"></div>
             <div className="bg-white flex items-center gap-4 w-full">
-              <span className="text-sm font-medium">Buy</span>
+              <span className="text-sm font-medium min-w-8">Buy</span>
               <div
                 className="bg-green-500 h-4 rounded-sm"
                 style={{ width: "76%" }}
@@ -68,7 +68,7 @@ const Sentiment = () => {
               {/* <span className="text-sm font-medium">8%</span> */}
             </div>
             <div className="bg-white flex items-center gap-4 w-full">
-              <span className="text-sm font-medium">Hold</span>
+              <span className="text-sm font-medium min-w-8">Hold</span>
               <div
                 className="bg-gray-500 h-4 rounded-sm"
                 style={{ width: "8%" }}
@@ -81,7 +81,7 @@ const Sentiment = () => {
               {/* <span className="text-sm font-medium">16%</span> */}
             </div>
             <div className="bg-white flex items-center gap-4 w-full">
-              <span className="text-sm font-medium">Sell</span>
+              <span className="text-sm font-medium min-w-8">Sell</span>
               <div
                 className="bg-red-500 h-4 rounded-sm"
                 style={{ width: "16%" }}
