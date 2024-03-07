@@ -3,7 +3,7 @@ import { HiNewspaper } from "react-icons/hi";
 
 const Sentiment = () => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md mb-8">
       <h2 className="text-xl font-semibold mb-4">Sentiment</h2>
       <div className="flex space-x-4 mb-8">
         <div className="flex-1 bg-gray-100 p-4 rounded-lg flex flex-col items-center">

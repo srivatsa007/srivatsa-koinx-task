@@ -1,4 +1,5 @@
 import coin_data from "../Performance/coin_data";
+import { FaArrowRight } from "react-icons/fa6";
 
 const AboutCard = () => {
   // Destructuring data from coin_data object
@@ -7,8 +8,10 @@ const AboutCard = () => {
   } = coin_data;
 
   return (
-    <div className="max-w-4xl mx-auto p-8">
-      <div className="border border-gray-200 rounded-lg bg-white p-6">
+    <div
+    // className=" w-4xl mx-auto p-8 "
+    >
+      <div className="  bg-white p-6 rounded-lg shadow-md w-full max-w-4xl mx-auto mb-8">
         <h2 className="text-xl font-semibold mb-4">About Bitcoin</h2>
         <div className="mb-4">
           <h2 className="text-lg font-semibold mb-4">What is Bitcoin?</h2>
@@ -58,7 +61,7 @@ const AboutCard = () => {
             Already Holding Bitcoin?
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-4 rounded-lg">
+            {/* <div className="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-4 rounded-lg flex h-fit">
               <div className="mb-4">
                 <h3 className="text-lg font-semibold mb-2">
                   Calculate your Profits
@@ -67,19 +70,45 @@ const AboutCard = () => {
                   alt="Profit Calculation"
                   className="mb-4"
                   height="150"
-                  src="/placeholder.svg"
+                  src="https://images.unsplash.com/photo-1671459926356-9d06ffea5d4e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   style={{
-                    aspectRatio: "250/150",
+                    maxHeight: "150px",
+                    maxWidth: "150px",
                     objectFit: "cover",
                   }}
-                  width="250"
+
                 />
                 <button className="bg-blue-800 hover:bg-blue-900 py-2 px-4 rounded-lg">
                   Check Now
                 </button>
               </div>
+            </div> */}
+            <div className="bg-gradient-to-r from-[#6ee7b7] to-[#1363AD] text-white p-4 rounded-lg flex h-fit">
+              <div className="mr-4">
+                <img
+                  alt="Profit Calculation"
+                  className="rounded-lg"
+                  src="https://images.unsplash.com/photo-1671459926356-9d06ffea5d4e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  style={{
+                    maxHeight: "150px",
+                    maxWidth: "150px",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+              <div className="flex flex-col justify-between">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-semibold mb-2">
+                    Calculate your Profits
+                  </h3>
+                  <button className="bg-white py-2 px-4 rounded-lg text-gray-950 font-semibold flex items-center gap-2">
+                    Check Now <FaArrowRight />
+                  </button>
+                </div>
+              </div>
             </div>
-            <div className="bg-gradient-to-r from-green-500 to-green-700 text-white p-4 rounded-lg">
+
+            {/* <div className="bg-gradient-to-r from-green-500 to-green-700 text-white p-4 rounded-lg">
               <div className="mb-4">
                 <h3 className="text-lg font-semibold mb-2">
                   Calculate your tax liability
@@ -87,8 +116,8 @@ const AboutCard = () => {
                 <img
                   alt="Tax Calculation"
                   className="mb-4"
-                  height="150"
-                  src="/placeholder.svg"
+                  height="250"
+                  src="https://images.unsplash.com/photo-1671459922221-be8beec5c9fa?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   style={{
                     aspectRatio: "250/150",
                     objectFit: "cover",
@@ -98,6 +127,31 @@ const AboutCard = () => {
                 <button className="bg-green-800 hover:bg-green-900 py-2 px-4 rounded-lg">
                   Check Now
                 </button>
+              </div>
+            </div> */}
+            {/* bg-gradient-to-r from-[#6ee7b7] to-[#3b82f6] */}
+            <div className="bg-gradient-to-r from-orange-400 to-red-500 text-white p-4 rounded-lg flex h-fit">
+              <div className="mr-4">
+                <img
+                  alt="Tax Calculation"
+                  className="rounded-lg"
+                  src="https://images.unsplash.com/photo-1671459922221-be8beec5c9fa?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  style={{
+                    maxHeight: "150px",
+                    maxWidth: "150px",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+              <div className="flex flex-col justify-between">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-semibold mb-2">
+                    Calculate your tax liability
+                  </h3>
+                  <button className="bg-white py-2 px-4 rounded-lg text-gray-950 font-semibold flex items-center gap-2">
+                    Check Now <FaArrowRight />
+                  </button>
+                </div>
               </div>
             </div>
           </div>

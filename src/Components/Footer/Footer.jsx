@@ -76,7 +76,7 @@ const Footer = () => {
   const trendingItems = trending.coins.slice(0, 10).map((item) => item.item);
 
   return (
-    <footer className="bg-gray-100 p-8 relative">
+    <footer className="bg-white p-8 relative mt-8">
       <div className="container mx-auto">
         <div className="mb-6 relative">
           <h2 className="text-lg font-semibold mb-4">You May Also Like</h2>

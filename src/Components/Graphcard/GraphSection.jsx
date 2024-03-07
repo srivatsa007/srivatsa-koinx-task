@@ -3,7 +3,7 @@ import TradingViewWidget from "./TradingViewWidget";
 
 const GraphSection = () => {
   return (
-    <div className="max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-md w-full h-fit">
       <div className="flex items-center space-x-3">
         <FaBitcoin className="h-8 w-8 text-orange-500" />
         <h1 className="text-3xl font-bold">Bitcoin</h1>
@@ -23,7 +23,7 @@ const GraphSection = () => {
         </div>
         <div className="text-lg text-gray-600">₹39,42,343</div>
       </div>
-      <div className="mt-6">
+      <div className="my-6 h-[450px]">
         <h2 className="text-xl font-semibold">Bitcoin Price Chart (USD)</h2>
         {/* <div className="mt-4 flex space-x-3">
           <button className="text-xs" variant="ghost">
