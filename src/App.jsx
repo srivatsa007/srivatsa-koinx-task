@@ -7,6 +7,8 @@ import GraphSection from "./Components/Graphcard/GraphSection";
 import CtaCard from "./Components/CTA/CtaCard";
 import TrendingCard from "./Components/Trending/TrendingCard";
 import Performance from "./Components/Performance/Performance";
+import AboutCard from "./Components/about/AboutCard";
+import Sentiment from "./Components/Sentiment/Sentiment";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -18,6 +20,8 @@ function App() {
       <CtaCard />
       <TrendingCard />
       <Performance />
+      <Sentiment />
+      <AboutCard />
     </div>
   );
 }
