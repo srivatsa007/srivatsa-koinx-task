@@ -9,6 +9,8 @@ import TrendingCard from "./Components/Trending/TrendingCard";
 import Performance from "./Components/Performance/Performance";
 import AboutCard from "./Components/about/AboutCard";
 import Sentiment from "./Components/Sentiment/Sentiment";
+import Tokenomics from "./Components/Tokenomics/Tokenomics";
+import Team from "./Components/Teams/Team";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -22,6 +24,8 @@ function App() {
       <Performance />
       <Sentiment />
       <AboutCard />
+      <Tokenomics />
+      <Team />
     </div>
   );
 }

@@ -88,7 +88,7 @@ const AboutCard = () => {
                   alt="Tax Calculation"
                   className="mb-4"
                   height="150"
-                  src="/placeholder.svg"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   style={{
                     aspectRatio: "250/150",
                     objectFit: "cover",
@@ -100,6 +100,14 @@ const AboutCard = () => {
                 </button>
               </div>
             </div>
+          </div>
+          <div>
+            <p className="my-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+              vel repudiandae natus rem ut eius vero, cum voluptas numquam sed
+              commodi labore fuga. Corrupti obcaecati, repudiandae reprehenderit
+              nisi ipsa similique?
+            </p>
           </div>
         </div>
       </div>
