@@ -27,61 +27,68 @@ const GraphSection = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-md w-full h-fit">
-      {bitcoinData && (
-        <>
-          <div className="flex items-center space-x-3">
-            <FaBitcoin className="h-8 w-8 text-orange-500" />
-            <h1 className="text-3xl font-bold">Bitcoin</h1>
-            <span className="px-3 py-1 text-sm font-semibold text-white bg-green-500 rounded-full">
-              BTC
-            </span>
-            <span className="px-3 py-1 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">
-              Rank #1
-            </span>
-          </div>
-          <div className="mt-4">
-            <div className="flex items-baseline space-x-2">
-              <span className="text-4xl font-bold">
-                {currency === "USD"
-                  ? `$${bitcoinData.usd}`
-                  : `₹${bitcoinData.inr}`}
-              </span>
-              <span
-                className={`text-sm font-semibold ${
-                  bitcoinData[currency.toLowerCase() + "_24h_change"] >= 0
-                    ? "text-green-600"
-                    : "text-red-600"
-                }`}
-              >
-                {bitcoinData[currency.toLowerCase() + "_24h_change"] >= 0
-                  ? "▲"
-                  : "▼"}{" "}
-                {Math.abs(
-                  bitcoinData[currency.toLowerCase() + "_24h_change"]
-                ).toFixed(2)}
-                % (24H)
-              </span>
-            </div>
-            <div className="text-lg text-gray-600 flex gap-4">
-              {currency === "USD"
-                ? `₹${bitcoinData.inr}`
-                : `$${bitcoinData.usd}`}
-              <button
-                className="text-sm text-blue-600 hover:underline"
-                onClick={handleCurrencyToggle}
-              >
-                {currency === "USD" ? "Switch to INR" : "Switch to USD"}
-              </button>
-            </div>
-          </div>
-        </>
-      )}
-      <div className="my-6 h-[450px]">
-        <h2 className="text-xl font-semibold">Bitcoin Price Chart (USD)</h2>
-        <TradingViewWidget currency={currency} key={currency} />
+    <>
+      <div className="text-sm font-medium max-w-4xl mx-auto mt-8 ">
+        <span className="text-gray-600 font-normal">Cryptocurrencies</span>
+        <span className="mx-1 text-gray-400">{`>>`}</span>
+        <span className="text-black font-semibold">Bitcoin</span>
       </div>
-    </div>
+      <div className="max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-md w-full h-fit">
+        {bitcoinData && (
+          <>
+            <div className="flex items-center space-x-3">
+              <FaBitcoin className="h-8 w-8 text-orange-500" />
+              <h1 className="text-3xl font-bold">Bitcoin</h1>
+              <span className="px-3 py-1 text-sm font-semibold text-white bg-green-500 rounded-full">
+                BTC
+              </span>
+              <span className="px-3 py-1 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">
+                Rank #1
+              </span>
+            </div>
+            <div className="mt-4">
+              <div className="flex items-baseline space-x-2">
+                <span className="text-4xl font-bold">
+                  {currency === "USD"
+                    ? `$${bitcoinData.usd}`
+                    : `₹${bitcoinData.inr}`}
+                </span>
+                <span
+                  className={`text-sm font-semibold ${
+                    bitcoinData[currency.toLowerCase() + "_24h_change"] >= 0
+                      ? "text-green-600"
+                      : "text-red-600"
+                  }`}
+                >
+                  {bitcoinData[currency.toLowerCase() + "_24h_change"] >= 0
+                    ? "▲"
+                    : "▼"}{" "}
+                  {Math.abs(
+                    bitcoinData[currency.toLowerCase() + "_24h_change"]
+                  ).toFixed(2)}
+                  % (24H)
+                </span>
+              </div>
+              <div className="text-lg text-gray-600 flex gap-4">
+                {currency === "USD"
+                  ? `₹${bitcoinData.inr}`
+                  : `$${bitcoinData.usd}`}
+                <button
+                  className="text-sm text-blue-600 hover:underline"
+                  onClick={handleCurrencyToggle}
+                >
+                  {currency === "USD" ? "Switch to INR" : "Switch to USD"}
+                </button>
+              </div>
+            </div>
+          </>
+        )}
+        <div className="my-6 h-[450px]">
+          <h2 className="text-xl font-semibold">Bitcoin Price Chart (USD)</h2>
+          <TradingViewWidget currency={currency} key={currency} />
+        </div>
+      </div>
+    </>
   );
 };
 
