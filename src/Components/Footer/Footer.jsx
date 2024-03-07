@@ -1,15 +1,32 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Badge from "./Badge";
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import trending from "../Trending/trendingcoins";
 
 const Footer = () => {
+  const [trendingItems, setTrendingItems] = useState([]);
+
   const sliderRef1 = useRef(null);
   const sliderRef2 = useRef(null);
 
+  useEffect(() => {
+    fetchTrendingData();
+  }, []);
+
+  const fetchTrendingData = async () => {
+    try {
+      const response = await fetch(
+        "https://api.coingecko.com/api/v3/search/trending"
+      );
+      const data = await response.json();
+      const trendingCoins = data.coins.slice(0, 10).map((item) => item.item);
+      setTrendingItems(trendingCoins);
+    } catch (error) {
+      console.error("Error fetching trending data:", error);
+    }
+  };
   useEffect(() => {
     const prevButton1 = document.querySelector(".prev-button1");
     const nextButton1 = document.querySelector(".next-button1");
@@ -37,15 +54,12 @@ const Footer = () => {
       });
     }
   }, []);
-
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    // nextArrow: <SampleNextArrow />,
-    // prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -73,9 +87,6 @@ const Footer = () => {
       },
     ],
   };
-
-  // Take the first 10 items from the trending object
-  const trendingItems = trending.coins.slice(0, 10).map((item) => item.item);
 
   return (
     <footer className="bg-white p-8 relative mt-8">
@@ -118,11 +129,8 @@ const Footer = () => {
 };
 
 const Card = ({ coin }) => {
-  // Extracting price change percentage in USD and rounding it to 2 decimal places
   const percentageChange = coin.data.price_change_percentage_24h.usd;
   const priceChangePercentage = percentageChange.toFixed(2);
-
-  // Determine the color based on the sign of the percentage change
   const color = percentageChange >= 0 ? "text-green-600" : "text-red-600";
 
   return (
@@ -139,7 +147,6 @@ const Card = ({ coin }) => {
         <p className="text-xl font-semibold">
           {coin.name} | {coin.data.price}
         </p>
-        {/* <p className="text-lg font-semibold"></p> */}
         <img
           src={coin.data.sparkline}
           alt="Sparkline"
