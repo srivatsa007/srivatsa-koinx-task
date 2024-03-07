@@ -5,6 +5,7 @@ import "./App.css";
 import Navbar from "./Components/navbar/Navbar";
 import GraphSection from "./Components/Graphcard/GraphSection";
 import CtaCard from "./Components/CTA/CtaCard";
+import TrendingCard from "./Components/Trending/TrendingCard";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <GraphSection />
       <CtaCard />
+      <TrendingCard />
     </div>
   );
 }
