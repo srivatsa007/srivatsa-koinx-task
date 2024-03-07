@@ -54,12 +54,45 @@ const Footer = () => {
       });
     }
   }, []);
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "block",
+          // background: "green",
+          borderRadius: "100%",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "block",
+          // background: "green"
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
+    nextArrow: <SampleNextArrow className="bg-black" />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -100,12 +133,12 @@ const Footer = () => {
               </div>
             ))}
           </Slider>
-          <button className="common-button prev-button1 absolute top-1/2 left-0 transform -translate-y-1/2 border-solid border border-gray-300 p-1 rounded-full bg-white">
+          {/* <button className="common-button prev-button1 absolute top-1/2 left-0 transform -translate-y-1/2 border-solid border border-gray-300 p-1 rounded-full bg-white">
             <BsChevronLeft color="black" size={20} />
           </button>
           <button className="common-button next-button1 absolute top-1/2 right-0 transform -translate-y-1/2 border-solid border border-gray-300 p-1 rounded-full bg-white">
             <BsChevronRight color="black" size={20} />
-          </button>
+          </button> */}
         </div>
         <div className="my-4 relative">
           <h2 className="text-lg font-semibold mb-4">Trending Coins</h2>
@@ -116,12 +149,12 @@ const Footer = () => {
               </div>
             ))}
           </Slider>
-          <button className="common-button prev-button1 absolute top-1/2 left-0 transform -translate-y-1/2 border-solid border border-gray-300 p-1 rounded-full bg-white ">
+          {/* <button className="common-button prev-button1 absolute top-1/2 left-0 transform -translate-y-1/2 border-solid border border-gray-300 p-1 rounded-full bg-white ">
             <BsChevronLeft color="black" size={20} />
           </button>
           <button className="common-button next-button1 absolute top-1/2 right-0 transform -translate-y-1/2 border-solid border border-gray-300 p-1 rounded-full bg-white">
             <BsChevronRight color="black" size={20} />
-          </button>
+          </button> */}
         </div>
       </div>
     </footer>

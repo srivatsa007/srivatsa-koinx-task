@@ -25,5 +25,13 @@
   height: 100%;
   border-radius: 4px; /* Rounded corners */
 }
+.slick-prev:before, .slick-next:before{
+  font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: 1;
+    color: #adadad;
+    -webkit-font-smoothing: antialiased;
+}
 
 
