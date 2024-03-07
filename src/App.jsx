@@ -11,6 +11,7 @@ import AboutCard from "./Components/about/AboutCard";
 import Sentiment from "./Components/Sentiment/Sentiment";
 import Tokenomics from "./Components/Tokenomics/Tokenomics";
 import Team from "./Components/Teams/Team";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -26,6 +27,7 @@ function App() {
       <AboutCard />
       <Tokenomics />
       <Team />
+      <Footer />
     </div>
   );
 }

@@ -32,3 +32,7 @@
   margin-right: 8px; /* Adjust the spacing between the bar and the text */
 }
 
+.prev-button,
+.next-button {
+  background-color: red;
+}
