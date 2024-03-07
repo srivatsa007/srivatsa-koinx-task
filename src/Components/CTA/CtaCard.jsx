@@ -16,7 +16,7 @@ function CtaCard() {
             alt="Illustration"
             className="mb-6"
             height="200"
-            src="srivatsa-koinx-task/src/Components/CTA/CTAillustration.png"
+            src="src/Components/CTA/CTAillustration.png"
             style={{
               aspectRatio: "200/200",
               objectFit: "cover",
