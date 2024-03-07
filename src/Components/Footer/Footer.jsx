@@ -91,7 +91,7 @@ const Footer = () => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow className="bg-black" />,
+    nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
