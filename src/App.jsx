@@ -15,16 +15,19 @@ import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
-    <div className="space-x-4">
+    <div className="">
       <Navbar />
-      <div className="my-4 mx-auto ">
-        <div className="text-sm font-medium max-w-4xl  flex-start">
+      <div className="my-4 mx-8">
+        <div className="text-sm font-medium max-w-4xl  flex-start mx-2">
           <span className="text-gray-600 font-normal">Cryptocurrencies</span>
           <span className="mx-1 text-gray-400">{`>>`}</span>
           <span className="text-black font-semibold">Bitcoin</span>
         </div>
-        <div className="flex flex-col md:flex-row flex-1 my-8 gap-8">
-          <div className="md:w-2/3">
+        <div
+          className="flex flex-col md:flex-row md:justify-between my-8 "
+          // md:gap-4"
+        >
+          <div className=" md:w-fit mx-2">
             <GraphSection />
             <Performance />
             <Sentiment />
@@ -32,7 +35,7 @@ function App() {
             <Tokenomics />
             <Team />
           </div>
-          <div className="md:w-1/3 flex flex-col items-center">
+          <div className=" md:w-fit flex flex-col items-center ">
             <CtaCard />
             <TrendingCard />
           </div>

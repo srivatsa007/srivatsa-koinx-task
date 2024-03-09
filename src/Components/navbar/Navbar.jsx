@@ -22,27 +22,27 @@ function Navbar() {
           {isOpen && (
             <div
               className="fixed left-0 shadow-4xl right-0 
-              top-[3.5rem] p-5 pt-0 bg-slate-200 border-b border-b-white/20"
+              top-[3.5rem] p-5 pt-0 bg-blue-200 border-b border-b-white/20 rounded-b-2xl"
             >
-              <ul className="grid gap-2">
-                <li className="w-full p-[0.08rem] rounded-xl">
+              <ul className=" flex flex-col gap-2 justify-evenly mt-4">
+                <li className="w-full p-[0.08rem] rounded-xl border-white border-2 px-2 mt-2">
                   <a className="text-sm font-medium" href="#">
                     Crypto Taxes
                   </a>
                 </li>
-                <li className="w-full p-[0.08rem] rounded-xl">
+                <li className="w-full p-[0.08rem] rounded-xl border-white border-2 px-2 mt-2">
                   <a className="text-sm font-medium" href="#">
                     Free Tools
                   </a>
                 </li>
-                <li className="w-full p-[0.08rem] rounded-xl">
+                <li className="w-full p-[0.08rem] rounded-xl border-white border-2 px-2 mt-2">
                   <a className="text-sm font-medium" href="#">
                     Resource Center
                   </a>
                 </li>
-                <li className="w-full p-[0.08rem] rounded-xl">
+                <li className="w-full p-[0.08rem] rounded-xl  mt-2">
                   <a
-                    className=" btn btn-primary hover:bg-blue-500 py-1"
+                    className="  hover:bg-blue-500  bg-blue-700 p-2 rounded-xl  text-white"
                     role="button"
                     href="https://app.koinx.com/get-started"
                   >
