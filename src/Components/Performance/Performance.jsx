@@ -14,7 +14,7 @@ const Performance = () => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md max-w-4xl  mb-8">
       <div>
-        <div className="flex space-x-4 mb-4 border-b">
+        <div className="flex space-x-4 mb-4 border-b overflow-hidden">
           <div className="pb-2 border-b-2 border-blue-500 text-blue-500">
             Overview
           </div>
