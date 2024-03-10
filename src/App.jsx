@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import "./App.css";
@@ -14,6 +14,28 @@ import Team from "./Components/Teams/Team";
 import Footer from "./Components/Footer/Footer";
 
 function App() {
+  const [coin_Data, setCoinData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://api.coingecko.com/api/v3/coins/bitcoin"
+        );
+        if (response.ok) {
+          const data = await response.json();
+          setCoinData(data);
+        } else {
+          console.error("Failed to fetch data from the API");
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="">
       <Navbar />
@@ -29,9 +51,11 @@ function App() {
         >
           <div className=" md:w-fit mx-2">
             <GraphSection />
-            <Performance />
+            <Performance coin_Data={coin_Data} />
             <Sentiment />
-            <AboutCard />
+            <AboutCard
+            // coin_Data={coin_Data}
+            />
             <Tokenomics />
             <Team />
           </div>
