@@ -8,7 +8,7 @@ import { FaDotCircle } from "react-icons/fa";
 
 const Tokenomics = () => {
   return (
-    <div className="flex ">
+    <div className="md:flex hidden">
       <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-4xl mb-8">
         <h2 className="text-lg font-semibold mb-4">Tokenomics</h2>
         <div className="flex items-center">

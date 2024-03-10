@@ -8,15 +8,18 @@ const Team = () => {
         quam. Facilisis purus convallis quam augue.
       </p>
       <div className="grid grid-cols-1 gap-6">
-        <div className="flex items-center space-x-4">
-          <img
-            className="rounded-lg w-20 h-20 object-cover"
-            src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="John Smith"
-          />
-          <div>
+        <div className="flex md:flex-row flex-col items-center space-x-4">
+          <div className="flex flex-col items-center justify-center w-full">
+            <img
+              className="rounded-lg w-20 h-20 object-cover"
+              src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="John Smith"
+            />
             <h3 className="text-lg font-semibold">John Smith</h3>
-            <p className="text-sm text-gray-500 mb-2">Designation here</p>
+            <p className="text-xs text-gray-500 mb-2">Designation here</p>
+          </div>
+
+          <div>
             <p className="text-gray-600">
               Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit
               fermentum ut libero hendrerit id. Tellus sit ornare netus sagittis
@@ -28,15 +31,17 @@ const Team = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center space-x-4">
-          <img
-            className="rounded-lg w-20 h-20 object-fill"
-            src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?q=80&w=1944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Elina Williams"
-          />
-          <div>
+        <div className="flex md:flex-row flex-col items-center space-x-4">
+          <div className="flex flex-col items-center justify-center w-full">
+            <img
+              className="rounded-lg w-20 h-20 object-fill"
+              src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?q=80&w=1944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Elina Williams"
+            />
             <h3 className="text-lg font-semibold">Elina Williams</h3>
             <p className="text-sm text-gray-500 mb-2">Designation here</p>
+          </div>
+          <div>
             <p className="text-gray-600">
               Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit
               fermentum ut libero hendrerit id. Tellus sit ornare netus sagittis
@@ -48,15 +53,17 @@ const Team = () => {
             </p>
           </div>
         </div>
-        <div className="flex items-center space-x-4">
-          <img
-            className="rounded-lg w-20 h-20 object-cover"
-            src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="John Smith"
-          />
-          <div>
+        <div className=" flex md:flex-row flex-col items-center space-x-4">
+          <div className="flex flex-col items-center justify-center w-full">
+            <img
+              className="rounded-lg w-20 h-20 object-cover"
+              src="https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="John Smith"
+            />
             <h3 className="text-lg font-semibold">John Smith</h3>
             <p className="text-sm text-gray-500 mb-2">Designation here</p>
+          </div>
+          <div>
             <p className="text-gray-600">
               Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit
               fermentum ut libero hendrerit id. Tellus sit ornare netus sagittis
